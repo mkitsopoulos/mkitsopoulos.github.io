@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <section class="converter">
+      <p><b>Running Pace Calculator</b></p><hr>
+      <div class="box1"><label for="units">Units</label>
+        <select id="units">
+          <option value="Mi">Mi</option>
+          <option value="Km">Km</option>
+        </select>
+        <select id="races">
+          <option value="custom">Custom</option>
+          <option value="5k">5k</option>
+          <option value="8k">8k</option>
+          <option value="10k">10k</option>
+          <option value="half-marathon">Half Marathon</option>
+          <option value="marathon">Marathon</option>
+        </select>
+      </div>
+      <div class="box2"><label for="distance">Distance</label><input type="text" id="distance" placeholder="Distance" oninput="numbersOnly(this)"></div>
+      <div class="box3"><label for="duration-hours">Hours</label><input type="text" id="duration-hours" placeholder="00" oninput="numbersOnly(this)"></div>
+      <div class="box4"><label for="duration-mins">Minutes</label><input type="text" id="duration-mins" placeholder="00" oninput="numbersOnly(this)"></div>
+      <div class="box5"><label for="duration-secs">Seconds</label><input type="text" id="duration-secs" placeholder="00" oninput="numbersOnly(this)"></div>
+      <div class="box6"><button id="submit" onclick="paceConverter()">Calculate Pace</button></div>
+      <div class="box7"><label for="pace">Pace</label><input type="text" id="pace" placeholder="Pace" readonly></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
